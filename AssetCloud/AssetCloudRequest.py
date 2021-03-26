@@ -49,7 +49,7 @@ def http_request(url, key, secret, body=None, httpMethods='GET'):
     if 'GET' == httpMethods:
         res = requests.get(url=url, headers=headers)
     elif 'POST' == httpMethods:
-        res = requests.get(url=url, headers=headers, data=body)
+        res = requests.post(url=url, headers=headers, data=body)
     elif 'PUT' == httpMethods:
         res = requests.put(url=url, headers=headers, data=body)
     elif 'DELETE' == httpMethods:
